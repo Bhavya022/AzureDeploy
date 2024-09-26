@@ -6,6 +6,10 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 // Handle data push requests
+app.get('/', (req, res) => {
+    res.send('Welcome!');
+  });
+  
 app.post('/dataPushFunction', async (req, res) => {
     const { dataPushUrl, requestBody } = req.body;
 
